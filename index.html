@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Map ห้างดังในกรุงเทพ </title>
+<link rel="stylesheet" href=https://unpkg.com/leaflet@1.9.3/dist/leaflet.css integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="crossorigin=""/>
+
+<script src=https://unpkg.com/leaflet@1.9.3/dist/leaflet.js integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+</head>
+
+<body>
+<div id="map" style="height: 600px"></div>
+
+<script>
+var map = L.map('map').setView([13.765035935062436, 100.5382638386509], 12);
+L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+var greenIcon = L.icon({
+iconUrl: 'clipart644594.png',
+iconSize:     [30, 30], // size of the icon
+iconAnchor:   [45, 45], // point of the icon which will correspond to marker's location
+popupAnchor:  [0, -39] // point from which the popup should open relative to the iconAnchor		
+});
+
+L.marker([13.726482881153686, 100.50994091172004],{icon:greenIcon}).addTo(map).bindPopup("<b>ICONSIAM</b><br>299 Charoen Nakhon Rd, Khlong Ton Sai, Khlong San, Bangkok 10600<br>");
+
+L.marker([13.745776189340187, 100.53440303742535],{icon:greenIcon}).addTo(map).bindPopup("<b>Siam Paragon</b><br>991/1 Rama I Rd, Pathum Wan, Bangkok 10330<br>");
+
+L.marker([13.746669166416043, 100.53917025399139],{icon:greenIcon}).addTo(map).bindPopup("<b>centralwOrld</b><br>999/9 Rama I Rd, Pathum Wan, Bangkok 10330<br>");
+
+L.marker([13.79920855753656, 100.54788205824643],{icon:greenIcon}).addTo(map).bindPopup("<b>Red Building Vintage Chatuchak</b><br>จังชั่น 511 อาคารศูนย์การค้าบางซื่ิอ Kamphaeng Phet 2 Rd, Chatuchak, Bangkok 10900<br>");
+
+L.marker([13.733777392338146, 100.5284199503322],{icon:greenIcon}).addTo(map).bindPopup("<b>Samyan Mitrtown</b><br>944 Rama IV Rd, Wang Mai, Pathum Wan, Bangkok 10330<br>");
+
+L.marker([13.731234388085154, 100.56950066261257],{icon:greenIcon}).addTo(map).bindPopup("<b>EmQuartier</b><br>695 Sukhumvit Rd, Khlong Tan Nuea, Watthana, Bangkok 10110<br>");
+</script>
+</body>
+</html>
